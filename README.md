@@ -4,6 +4,8 @@ Rust-based AP2 verification core with Ruby FFI integration, designed for secure,
 
 > **Status: Vision / planning only.** No Rust implementation has started. The existing Ruby verifier project remains the immediate priority.
 
+<img width="1448" height="1086" alt="RustコアとRuby FFIの構成図" src="https://github.com/user-attachments/assets/8ccd3b1d-c0f0-4d0f-ac58-782f627809f1" />
+
 ## Vision
 
 Implement the AP2 v0.2 mandate verification rules once in a reusable **Rust core**, with language-specific adapters.
