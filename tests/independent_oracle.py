@@ -1,7 +1,7 @@
 """Pinned official SDK + cryptography oracle. No Ruby verdict is consulted.
 Synthetic graph design is shared; this is not real-issuer provenance proof.
 """
-import base64,ctypes,hashlib,json
+import base64,ctypes,hashlib,json,os
 from pathlib import Path
 from cryptography.hazmat.primitives import hashes,serialization
 from cryptography.hazmat.primitives.asymmetric import ec,utils
@@ -10,7 +10,11 @@ from ap2.sdk.sdjwt import sd_jwt
 from ap2.sdk.generated.checkout_mandate import CheckoutMandate
 
 ROOT=Path('/work')
-lib=ctypes.CDLL(str(ROOT/'target/debug/libap2_verifier_core.so'))
+manifest=json.loads((ROOT/"conformance/v1/manifest.json").read_text())
+for path,record in manifest["files"].items():
+    data=(ROOT/path).read_bytes()
+    assert len(data)==record["bytes"] and hashlib.sha256(data).hexdigest()==record["sha256"]
+lib=ctypes.CDLL(os.environ.get("AP2_CORE_LIBRARY",str(ROOT/"target/debug/libap2_verifier_core.so")))
 lib.ap2_verify_v1.argtypes=[ctypes.c_void_p,ctypes.c_size_t,ctypes.c_void_p,ctypes.c_size_t]
 lib.ap2_verify_v1.restype=ctypes.c_ssize_t
 

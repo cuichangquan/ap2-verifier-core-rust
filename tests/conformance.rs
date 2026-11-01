@@ -72,3 +72,30 @@ fn malformed_fuzz_smoke_never_mints_evidence() {
         assert!(r["evidence"].is_null());
     }
 }
+
+#[test]
+fn structured_mutation_smoke_preserves_result_contract() {
+    let cases: Vec<Value> =
+        serde_json::from_str(include_str!("../conformance/v1/cases.json")).unwrap();
+    let mut seed = 0x394d37fe357902f1u64;
+    for case in cases.iter().filter(|v| v["expected_status"] != "rejected") {
+        let original = serde_json::to_vec(&json!({"contract_version":"ap2-core-request.1","operation":case["operation"],"arguments":case["arguments"]})).unwrap();
+        for _ in 0..16 {
+            let mut bytes = original.clone();
+            seed ^= seed << 13;
+            seed ^= seed >> 7;
+            seed ^= seed << 17;
+            let i = (seed as usize) % bytes.len();
+            bytes[i] ^= (seed >> 32) as u8 | 1;
+            let result = verify_json(&bytes);
+            assert_eq!(result["contract_version"], "ap2-core-result.1");
+            if result["status"] == "rejected" || result["status"] == "unavailable" {
+                assert!(result["evidence"].is_null());
+                assert!(result["facts"].is_null());
+            }
+            if result["status"] == "unverified" {
+                assert!(result["evidence"].is_null());
+            }
+        }
+    }
+}
