@@ -55,3 +55,9 @@ CAS, handle uncertain effects, then decide authorization/execution/payment.
 The verifier never creates or consumes a nonce, authenticates storage or approves
 an actual purchase. Real Issuer interoperability and production authorization are
 unproved. No general AP2 conformance, full Schema support or performance guarantee.
+
+Ruby `verify_json` snapshots exact String bytes using unbound built-in type/size/
+byteslice methods before Fiddle. Per-object overrides cannot lie about the native
+input pointer's byte length. This is API discipline, not a sandbox for hostile Ruby
+code or globally monkey-patched built-ins. `verify` is a convenience for trusted
+plain Ruby argument records; use bounded original `verify_json` for raw wire input.

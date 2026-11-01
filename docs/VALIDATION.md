@@ -65,3 +65,8 @@ PASS while failing. No permission denial was bypassed.
 Remaining limits: [platform/test gaps](COVERAGE.md), [API differences](CONTRACT.md).
 Unpublished, `publish = false`; no release tag/assets/GitHub Release/cargo publish.
 Owner approval remains required for any library release.
+
+A follow-up self-audit hardened Ruby's native-input snapshot against per-String
+singleton overrides of type/size/copy methods. Three targeted regression checks
+were added; both MRI FFI runs pass them. This changes only Ruby input detachment,
+not the Rust verification logic or frozen conformance suite.

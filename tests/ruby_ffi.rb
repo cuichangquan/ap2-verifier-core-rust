@@ -32,3 +32,18 @@ threads.each(&:value)
 # Host accepts only exact trusted library path. No Ruby verifier/subprocess is loaded.
 raise 'source Gem unexpectedly loaded' if defined?(AP2MandateVerifier)
 puts JSON.generate(ruby_ffi_cases:count,concurrent_calls:200,source_gem_loaded:false)
+# A String's singleton overrides must not supply a false pointer/length pair.
+wire='{}'.dup
+%i[instance_of? bytesize b dup].each{|name|wire.define_singleton_method(name){|*|raise 'caller callback dispatched'}}
+raise 'snapshot callback' unless core.verify_json(wire)['status']=='rejected'
+large=' '*131_073
+large.define_singleton_method(:bytesize){0}
+raise 'size override' unless core.verify_json(large)['code']=='input_too_large'
+pretender=Object.new
+pretender.define_singleton_method(:instance_of?){|*|true}
+begin
+ core.verify_json(pretender)
+ raise 'type override'
+rescue ArgumentError
+end
+puts JSON.generate(string_snapshot_override_checks:3)
