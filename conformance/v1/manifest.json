@@ -1,0 +1,33 @@
+{
+  "schema": "ap2.conformance-manifest.1",
+  "source_repository": "https://github.com/cuichangquan/ap2-mandate-verifier",
+  "source_tag": "v1.0.0",
+  "source_commit": "59e344ad865ed867d0993120456f9411d82bcdec",
+  "inspected_main": "9b1aa41c6de6ef57311fe4dc620bd7c259f2d140",
+  "ap2_commit": "b4587ac1d055888a73b4b21750973cffba961793",
+  "license": "MIT",
+  "private_keys_persisted": false,
+  "synthetic_data_only": true,
+  "source_paths": [
+    "lib/ap2_mandate_verifier/",
+    "research/stage15/results/R3/INPUTS.json",
+    "test/support/multi_item_fixture.rb",
+    "examples/input_builder/"
+  ],
+  "derivation": "Historical original signed wires retained unchanged. Additional synthetic multi-item, Direct, Receipt and causal negatives issued in memory with source public APIs/helper. No private signing keys retained. Generated once, then frozen; regeneration intentionally changes random keys/signatures.",
+  "cases": 61,
+  "files": {
+    "conformance/v1/cases.json": {
+      "bytes": 902825,
+      "sha256": "578da2dac7b4eb41dc01cbe23686927f25b2031e1c7cbda5bef0243852fa373a"
+    },
+    "conformance/v1/single_profile.json": {
+      "bytes": 648,
+      "sha256": "87642c94e30c7dec2106f0fcf8541f03c612e7732db299642447d7ed1235bc68"
+    },
+    "conformance/v1/multi_profile.json": {
+      "bytes": 1050,
+      "sha256": "1c3178817cccf263030f6306e5b9d26bf945bca5cd68c12118ce2723a25d150a"
+    }
+  }
+}

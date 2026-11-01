@@ -1,0 +1,3 @@
+{"independent_checks": 47, "official_ap2": "b4587ac1d055888a73b4b21750973cffba961793", "oracle": "official sd-jwt + cryptography 46.0.5", "network": false}
+{"causal_signature_and_binding_checks": 40}
+{"independent_exact_quantity_checks": 4}

@@ -1,63 +1,72 @@
 # AP2 Verifier Core (Rust)
 
-Rust-based AP2 verification core with Ruby FFI integration, designed for secure, reusable, cross-language mandate verification.
+Experimental native verification core with a local Ruby FFI adapter. **Unpublished;
+not a replacement for the completed Ruby Gem and not production authorization.**
 
-> **Status: Vision / planning only.** No Rust implementation has started. The existing Ruby verifier project remains the immediate priority.
-
-<img width="1448" height="1086" alt="RustコアとRuby FFIの構成図" src="https://github.com/user-attachments/assets/8ccd3b1d-c0f0-4d0f-ac58-782f627809f1" />
-
-## Vision
-
-Implement the AP2 v0.2 mandate verification rules once in a reusable **Rust core**, with language-specific adapters.
+Ports the scoped verification rules from [ap2-mandate-verifier 1.0.0](https://github.com/cuichangquan/ap2-mandate-verifier/tree/v1.0.0),
+with strict JSON, ES256, exact original-wire hashing, SD-JWT disclosure closure,
+Open→Agent Closed delegation/constraints, independent Host trust/order/challenge
+bindings, Direct, Checkout JWT and Checkout Receipt verification.
+The first adapter uses Ruby's standard Fiddle to execute Rust in-process, without
+a verifier server, subprocess or source Gem at runtime.
 
 ```text
-Ruby Gem  -- FFI adapter ----+
-Python    -- future adapter -+--> Rust AP2 Verifier Core --> structured ACCEPT / REJECT
-TypeScript-- future adapter -+
-Go        -- future adapter -+
+Ruby Fiddle → bounded C ABI → Rust verification → structured result
+Host supplies trust, order, challenge and clock; Host owns state and execution.
 ```
 
-The first integration target is **Ruby Gem + Rust FFI**, embedded locally without requiring a separate verification server. The exact FFI design, native packaging, and API contract remain to be decided.
+## Build and try (Docker)
 
-## Intended responsibilities
+Requires Docker; adds no Rust/Ruby tooling to the host. The official Rust image is
+pinned by digest, Cargo dependencies by Cargo.lock. Build preparation downloads
+only official Rust components and crates. No Actions CI or paid services.
 
-- Rust core: strict input parsing, signature and SD-JWT disclosure verification, mandate constraints, delegation-chain checks, and fail-closed results, according to the verified AP2 v0.2 profile.
-- Language adapters: ergonomic SDK interfaces, input/output conversion, and native packaging for the target runtime.
-- Host application: provision trusted issuers/keys and policy, and implement external stateful services such as persistent nonce tracking. Trust decisions must not silently default to trusting arbitrary inputs.
+```sh
+docker build -f Dockerfile.validation -t ap2-core-rust-validation:local .
+docker run --rm --network none --cpus=2 --memory=2g \
+  -v "$PWD:/work" -w /work ap2-core-rust-validation:local \
+  sh -c 'cargo test --locked --offline && cargo build --release --locked --offline'
+docker run --rm --network none -v "$PWD:/work:ro" -w /work \
+  ruby:3.4.12-bookworm ruby examples/verify.rb
+```
 
-This is a **target architecture**, not a claim that these capabilities are implemented.
+The example uses retained synthetic inputs and a fixed clock; it does not contact
+issuers, issue or consume a challenge, execute an order or make a payment.
 
-## Reuse the existing Ruby research
+```ruby
+require_relative "adapters/ruby/lib/ap2_verifier_core"
+core = AP2VerifierCore::Native.new(
+  library_path: "/work/target/release/libap2_verifier_core.so")
+# seven_inputs must come from independently authenticated Host records;
+# preserve all signed strings and embedded JSON bodies byte-for-byte.
+result = core.verify(operation: "verify_checkout", arguments: seven_inputs)
+raise "Stop" unless result["status"] == "verified_research"
+facts = result.fetch("evidence") # checked facts; Host must still authorize
+```
 
-Source project: [ap2-mandate-verifier](https://github.com/cuichangquan/ap2-mandate-verifier).
+Full request/response and buffer ownership: [contract](docs/CONTRACT.md).
+Current coverage, differences, tests and NOT_RUN platforms: [coverage](docs/COVERAGE.md).
+Baseline/provenance/licensing: [notices](THIRD_PARTY_NOTICES.md) and
+[conformance manifest](conformance/v1/manifest.json).
 
-Reuse, after checking provenance and current validity:
-- AP2 specification research and security boundaries.
-- Language-neutral fixtures, including signed positive/negative and boundary cases.
-- Independent oracle and documented expected outcomes.
-- Threat models and fail-closed acceptance rules.
+## Security and scope
 
-Do **not** treat agreement between Ruby and Rust alone as proof of correctness. Retain independent signature/fixture verification and Rust-specific security tests, including unsafe/FFI boundaries, panic/error handling, memory/resource limits, and cross-platform packaging.
+Only the fixed profiles `ap2.checkout.single_merchant_sku` v1,
+`ap2.checkout.single_merchant_multi_item` v1 and Direct
+`ap2.checkout.direct.single_merchant` are intended. Unknown inputs fail closed.
+All candidates remain disclosed; no generic SD-JWT/JSON Schema/AP2 implementation.
+Partial checks return `unverified` and no successful Evidence. An authentic Error
+Receipt is a verified receipt with an unsuccessful purchase outcome.
 
-## Suggested development sequence
+Trust is never obtained from token keys. Host supplies current enrolled keys,
+profile/policy, expected order/challenge and clock; it owns authentication,
+revocation, durable replay state, atomic nonce/order CAS, final authorization and
+payment/execution. Serialized Evidence is not an authenticated credential.
+No real Issuer/Host production proof or cross-platform certification is claimed.
 
-1. Finish the current Ruby verifier and identify which research results are verified.
-2. Extract a versioned, language-neutral conformance test suite with input fixtures, trust configuration, and expected results.
-3. Define the Rust core API, error codes, and ABI/FFI boundary.
-4. Implement a small Rust core slice and compare against the independent oracle and Ruby baseline.
-5. Build the Ruby FFI adapter; test distribution on supported platforms.
-6. Consider Python, TypeScript/WASM, and Go adapters only when justified by demand.
+Issuance, input-building and signing remain in the source Ruby SDK. Its published
+APIs and defaults are unchanged. Python/TypeScript/Go adapters are future work.
+No cargo publication, public binary release, release tags or GitHub Release is
+performed; each needs separate Owner approval. See [implementation plan](docs/PLAN.md).
 
-## Non-goals for now
-
-- No immediate rewrite or replacement of the Ruby Gem.
-- No Rust code, CI, external downloads, paid infrastructure, or publishing until separately decided.
-- No premature assertion of full AP2 v0.2 compliance.
-
-## Design decisions to revisit
-
-- Rust core as a native library vs other delivery forms.
-- FFI approach for Ruby (for example, a native extension or explicit C ABI).
-- Canonical fixtures/schema/versioning and independent oracle.
-- Trusted key and policy injection, nonce storage boundary, and error/result model.
-- Platform support, builds, release signing, and security audit scope.
+MIT; adapted source notices are retained.
