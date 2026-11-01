@@ -1,0 +1,6 @@
+require 'json'
+require 'digest'
+root='/work'
+files=%w[conformance/v1/cases.json conformance/v1/single_profile.json conformance/v1/multi_profile.json]
+manifest={schema:'ap2.conformance-manifest.1',source_repository:'https://github.com/cuichangquan/ap2-mandate-verifier',source_tag:'v1.0.0',source_commit:'59e344ad865ed867d0993120456f9411d82bcdec',inspected_main:'9b1aa41c6de6ef57311fe4dc620bd7c259f2d140',ap2_commit:'b4587ac1d055888a73b4b21750973cffba961793',license:'MIT',private_keys_persisted:false,synthetic_data_only:true,source_paths:['lib/ap2_mandate_verifier/','research/stage15/results/R3/INPUTS.json','test/support/multi_item_fixture.rb','examples/input_builder/'],derivation:'Historical original signed wires retained unchanged. Additional synthetic multi-item, Direct, Receipt and causal negatives issued in memory with source public APIs/helper. No private signing keys retained. Generated once, then frozen; regeneration intentionally changes random keys/signatures.',cases:JSON.parse(File.read("#{root}/#{files[0]}")).size,files:files.to_h{|f|[f,{bytes:File.size("#{root}/#{f}"),sha256:Digest::SHA256.file("#{root}/#{f}").hexdigest}]}}
+File.write("#{root}/conformance/v1/manifest.json",JSON.pretty_generate(manifest)+"\n")
