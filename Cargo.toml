@@ -1,10 +1,13 @@
 [package]
 name = "ap2-verifier-core"
-version = "0.1.0-dev"
+version = "0.1.0-alpha.1"
 edition = "2021"
 rust-version = "1.85"
 license = "MIT"
-description = "Scoped AP2 verification core; experimental, unpublished"
+description = "Experimental fixed-profile AP2 verification core with a local C ABI"
+repository = "https://github.com/cuichangquan/ap2-verifier-core-rust"
+readme = "PACKAGE_README.md"
+include = ["Cargo.toml", "Cargo.lock", "src/**", "include/**", "adapters/ruby/**", "tests/conformance.rs", "tests/ruby_ffi.rb", "tests/independent_oracle.py", "examples/**", "conformance/v1/**", "LICENSE", "THIRD_PARTY_NOTICES.md", "SECURITY.md", "PACKAGE_README.md", "docs/CONTRACT.md", "docs/PACKAGE_CANDIDATE.md"]
 publish = false
 
 [lib]
