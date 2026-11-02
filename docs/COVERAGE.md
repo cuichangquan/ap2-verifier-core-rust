@@ -50,15 +50,23 @@ USD/EUR/JPY, or real trust enrollment. Unknowns reject.
 | aarch64-unknown-linux-gnu in Docker Desktop on Apple Silicon | Locally tested; dev and release build |
 | Ruby MRI 3.4.12 Linux/arm64 Fiddle | Locally tested |
 | Ruby MRI 4.0.9 Linux/arm64 Fiddle | Locally tested |
+| x86_64-unknown-linux-gnu + both MRIs in Docker on Apple Silicon | Clean build/tests observed under emulation; native x86 hardware NOT_RUN |
+| Clean pinned independent Python oracle, both Linux architectures | PASS; old task image no longer required |
+| Strict-provenance Miri / AddressSanitizer Linux/arm64 | PASS for scoped FFI library / all Rust tests respectively |
 | macOS arm64/x86_64 native dylib | NOT_RUN |
-| Linux x86_64 / musl | NOT_RUN |
+| Linux musl | NOT_RUN |
 | Windows DLL / MSVC | NOT_RUN |
-| Sanitizers, Miri, sustained fuzzing / load / memory profiling | NOT_RUN |
+| Sustained coverage-guided fuzzing / load / memory profiling | NOT_RUN |
 | ABI across untrusted in-process native code / dangling caller pointers | Not supported; caller memory contract |
 
-Only Linux/arm64 is an observed development target. No universal native packages,
+Observed development targets are Linux/arm64 and emulated Linux/x86_64. No universal native packages,
 performance SLA, real issuer interoperability or production GO. Resource limits
 bound request/graph/arrays/depth; they do not prove a wall-time/RSS upper bound.
 Publication remains disabled (`publish = false`) pending separate Owner approval
 and a separately scoped platform/distribution decision. Do not ship local debug
 or release binaries as public artifacts.
+
+The follow-up [reproducibility/safety record](REPRODUCIBILITY.md) gives exact source,
+tools and scope for these new observations. The PR #1 evidence remains historical and unchanged.
+[Candidate criteria](RELEASE_READINESS.md) distinguish these checks from replacement
+or publication approval.

@@ -14,4 +14,6 @@ intptr_t ap2_verify_v1(const uint8_t *input, size_t input_len, uint8_t *output, 
 #ifdef __cplusplus
 }
 #endif
+/* Overlapping address ranges and size arithmetic overflow reject with 0 before
+ * access. This does not validate allocation extents or dangling pointers. */
 #endif

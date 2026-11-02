@@ -1,0 +1,16 @@
+annotated-types==0.8.0
+attrs==26.1.0
+cffi==2.1.1
+cryptography==46.0.5
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+jwcrypto==1.5.6
+pycparser==3.12
+pydantic==2.12.5
+pydantic_core==2.41.5
+PyYAML==6.0.3
+referencing==0.37.0
+rpds-py==2026.9.1
+sd-jwt==0.10.4
+typing-inspection==0.4.4
+typing_extensions==4.16.0

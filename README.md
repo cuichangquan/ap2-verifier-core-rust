@@ -70,3 +70,16 @@ No cargo publication, public binary release, release tags or GitHub Release is
 performed; each needs separate Owner approval. See [implementation plan](docs/PLAN.md).
 
 MIT; adapted source notices are retained.
+
+## Reproduce without previous task images
+
+From a committed checkout with Docker, `./scripts/validate-clean.sh linux/arm64`
+creates an empty temporary source/target tree, builds the pinned oracle environment,
+then runs Rust debug/release, both MRIs and the independent official SDK checks.
+`linux/amd64` selects Docker x86_64 execution (emulated on the Apple Silicon test
+host). `./scripts/validate-safety.sh` runs date-pinned strict-provenance Miri and
+AddressSanitizer on Linux/arm64. Preparation downloads are from official registries;
+validation runs offline. Temporary source/build trees are removed, local Docker
+cache images remain. No CI service, host tool installation or publication.
+See [results and limits](docs/REPRODUCIBILITY.md) and
+[release decision criteria](docs/RELEASE_READINESS.md).

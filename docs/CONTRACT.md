@@ -61,3 +61,7 @@ byteslice methods before Fiddle. Per-object overrides cannot lie about the nativ
 input pointer's byte length. This is API discipline, not a sandbox for hostile Ruby
 code or globally monkey-patched built-ins. `verify` is a convenience for trusted
 plain Ruby argument records; use bounded original `verify_json` for raw wire input.
+
+ABI hardening rejects overlapping input/output address ranges and address-size
+arithmetic overflow before dereferencing. Caller still must provide valid live
+memory: this check cannot prove allocation extent or detect dangling pointers.
