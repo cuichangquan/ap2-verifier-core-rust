@@ -15,7 +15,7 @@ for p in sorted(metadata['packages'],key=lambda p:p['name']):
     directory=Path(p['manifest_path']).parent
     files=set()
     for entry in directory.iterdir():
-        if entry.name.upper().startswith(('LICENSE','COPYING','NOTICE','UNLICENSE')):
+        if entry.name.upper().startswith(('LICENSE','COPYING','NOTICE','UNLICENSE','AUTHORS')):
             if entry.is_file():files.add(entry)
             elif entry.is_dir():files.update(f for f in entry.rglob('*') if f.is_file())
     if p.get('license_file'):
