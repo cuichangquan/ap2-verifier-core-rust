@@ -41,4 +41,4 @@ done
 # The independently provisioned oracle image is reproducible from Dockerfile.oracle.
 docker build --platform "$platform" -f "$tree/source/Dockerfile.oracle" -t "ap2-core-oracle-$arch:local" "$tree/source"
 docker run --rm --platform "$platform" --network none --cpus=2 --memory=1g -v "$bundle:/work:ro" -w /work -e AP2_CORE_LIBRARY=/work/lib/libap2_verifier_core.so "ap2-core-oracle-$arch:local" python tests/independent_oracle.py
-printf 'PASS source_commit=%s target=%s local_artifacts=%s\n' "$sha" "$triple" "$output"
+printf 'PASS source_commit=%s target=%s local_artifacts=.cache/candidate/%s/%s\n' "$sha" "$triple" "$sha" "$arch"
