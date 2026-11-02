@@ -22,7 +22,7 @@ for file,text in [('dynamic.txt',needed),('symbol-versions.txt',versions),('expo
 metadata=dict(schema='ap2.local-native-candidate.1',version=version,target=triple,source_commit=os.environ['CANDIDATE_SOURCE_SHA'],
  source_crate_sha256=os.environ['CANDIDATE_CRATE_SHA'],rustc=subprocess.check_output(['rustc','-vV'],text=True),
  library=dict(path='lib/libap2_verifier_core.so',bytes=lib.stat().st_size,sha256=hashlib.sha256(lib.read_bytes()).hexdigest()),
- abi='ap2_verify_v1',request_contract='ap2-core-request.1',result_contract='ap2-core-result.1',publication='NOT_PUBLISHED')
+ abi='ap2_verify_v1',request_contract='ap2-core-request.1',result_contract='ap2-core-result.1',publication='NOT_PUBLISHED',release_status='HOLD_RUSTSEC-2026-0387')
 (bundle/'candidate.json').write_text(json.dumps(metadata,indent=2)+'\n')
 archive=out/(name+'.tar.gz')
 with tarfile.open(archive,'w:gz') as t:t.add(bundle,arcname=name)

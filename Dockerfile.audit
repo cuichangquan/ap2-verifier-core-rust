@@ -3,3 +3,5 @@ ENV CARGO_BUILD_JOBS=2
 RUN cargo install cargo-audit --version 0.22.2 --locked
 WORKDIR /work
 RUN git init /advisory-db && cd /advisory-db && git remote add origin https://github.com/RustSec/advisory-db.git && git fetch --depth 1 origin 2295466c4e9df26647fd67d8fa1c705ac2fc7f81 && git checkout --detach FETCH_HEAD
+COPY Cargo.toml Cargo.lock /audit-input/
+RUN mkdir /audit-input/src && printf 'pub fn placeholder() {}\n' > /audit-input/src/lib.rs && cargo fetch --manifest-path /audit-input/Cargo.toml --locked

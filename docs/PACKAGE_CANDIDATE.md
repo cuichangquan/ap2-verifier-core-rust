@@ -15,3 +15,10 @@ choose arm64 only if native x86 hardware evidence is required.
 This file defines candidate scope. Exact package bytes, licenses, toolchains,
 checksums and observed results are retained separately in the candidate report;
 no public distribution has been performed.
+
+Publication is additionally **HOLD** for known dependency advisory
+[RUSTSEC-2026-0387](https://rustsec.org/advisories/RUSTSEC-2026-0387.html) on
+crypto-bigint 0.5.5. Current operation uses public verification keys, not a signing
+API, but no blanket non-applicability conclusion is made. A compatible patched
+RustCrypto chain or independently justified scoped disposition requires further
+review; do not ignore/suppress the advisory to obtain a green release gate.

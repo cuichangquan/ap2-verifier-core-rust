@@ -44,3 +44,10 @@ caller buffers and does not catch pointer UB, OOM or abort.
 
 The source Gem is unchanged. This local candidate is unpublished, registry
 publishing disabled; public registry/binary/tag/Release needs separate approval.
+
+**Publication HOLD:** the pinned Rust dependency `crypto-bigint 0.5.5` is flagged
+by [RUSTSEC-2026-0387](https://rustsec.org/advisories/RUSTSEC-2026-0387.html).
+The advisory concerns timing behavior on secret integer operations. This core
+accepts public verification keys and exposes no signing API, but no exemption or
+complete impact proof is claimed. This candidate is for local evaluation only;
+resolve the dependency/impact gate before considering public distribution.
