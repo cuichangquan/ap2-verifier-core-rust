@@ -28,8 +28,9 @@ remains unchanged; no release tag, public native artifact or GitHub Release.
 4. Resolve applicable substantive review findings; inspect required checks and
    protections; obtain latest-HEAD independent review. Review is not certification.
 5. Decide whether the initial crate is experimental or a supported replacement;
-   keep transport/result/SDK gaps explicit. MSRV 1.85 is declared but still needs
-   its own validation or revised support statement before an MSRV guarantee.
+   keep transport/result/SDK gaps explicit. The patched experimental stack now
+   declares MSRV 1.88; exact source-package validation is recorded in the
+   candidate report. Earlier 1.85 evidence belongs to the old dependency stack.
 6. Owner approval for exact publication actions/artifacts/registry/version/tag.
    No `cargo publish`, public binaries, tags or GitHub Release before that approval.
 

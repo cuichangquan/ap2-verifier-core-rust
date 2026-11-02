@@ -6,19 +6,19 @@ code/docs/branches/PRs/tags/releases/settings are permanently outside this work.
 
 ## Concrete options
 
-1. **Recommended now: keep all artifacts private and HOLD publication.** Close
-   RUSTSEC-2026-0387 with a maintained compatible patched RustCrypto chain and
-   repeat conformance/oracle/MSRV/memory/package/advisory gates. Choose initial
-   Linux arm64-only or arm64 + explicitly experimental emulated-x86 scope.
-2. After that gate and independent review, request **source crate only** approval
+1. **Default: keep all artifacts private for local evaluation.** The initial
+   RUSTSEC-2026-0387 finding is repaired through the patched RustCrypto chain;
+   dated scan, conformance/oracle/MSRV/memory/package gates are recorded. This
+   does not itself authorize publication or guarantee overall security.
+2. If Owner chooses publication, prefer an initial **source crate only** approval
    for an exact experimental version/name/registry/source SHA/package digest.
    Native binary uploads remain unapproved, reducing distribution obligations.
-3. After that gate and per-target distribution review, request source plus exact
+3. After independent review and per-target distribution decision, request source plus exact
    Linux native bundle approval. x86 needs an explicit decision about emulated
    evidence versus additional native-hardware testing. macOS/Windows/musl stay out.
 
-This is a choice of future bounded release scope, not a request to publish a
-currently flagged artifact. No waiver/ignore rule is used to turn the audit green.
+This is a choice of future bounded release scope, not a publication request.
+No waiver/ignore rule is used to turn the audit green; the dependency was updated.
 A scoped non-applicability disposition would need independent evidence and an
 explicit reviewed decision; verification-only use is not itself that proof.
 

@@ -1,0 +1,1564 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "ap2-verifier-core-candidate-resolved-graph",
+  "documentNamespace": "https://spdx.org/spdxdocs/ap2-core-f12c4039e57df4286da13682bcf17cc22409d4e0a0d337f77a2843ab5f8449a6",
+  "creationInfo": {
+    "creators": [
+      "Tool: ap2-candidate-inventory-1"
+    ],
+    "created": "2026-11-02T00:37:54Z",
+    "creatorComment": "Resolved Cargo graph superset including build/other-platform dependencies; toolchain/system libraries recorded separately."
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-e05682060991668f",
+      "name": "ap2-verifier-core",
+      "versionInfo": "0.1.0-alpha.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT"
+    },
+    {
+      "SPDXID": "SPDXRef-e73568f7d960044f",
+      "name": "base16ct",
+      "versionInfo": "0.2.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/base16ct/0.2.0/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4c7f02d4ea65f2c1853089ffd8d2787bdbc63de2f0d29dedbcf8ccdfa0ccd4cf"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/base16ct@0.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-91cc039d012d51d1",
+      "name": "base64",
+      "versionInfo": "0.22.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/base64/0.22.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/base64@0.22.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-251315a577be18ad",
+      "name": "base64ct",
+      "versionInfo": "1.8.3",
+      "downloadLocation": "https://crates.io/api/v1/crates/base64ct/1.8.3/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/base64ct@1.8.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a2f03828ea583f25",
+      "name": "block-buffer",
+      "versionInfo": "0.10.4",
+      "downloadLocation": "https://crates.io/api/v1/crates/block-buffer/0.10.4/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/block-buffer@0.10.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-63e52654a6390758",
+      "name": "cfg-if",
+      "versionInfo": "1.0.5",
+      "downloadLocation": "https://crates.io/api/v1/crates/cfg-if/1.0.5/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/cfg-if@1.0.5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-73228c0d15ebc9b4",
+      "name": "const-oid",
+      "versionInfo": "0.9.6",
+      "downloadLocation": "https://crates.io/api/v1/crates/const-oid/0.9.6/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/const-oid@0.9.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-06e1c021ffa7e66b",
+      "name": "cpufeatures",
+      "versionInfo": "0.2.17",
+      "downloadLocation": "https://crates.io/api/v1/crates/cpufeatures/0.2.17/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "59ed5838eebb26a2bb2e58f6d5b5316989ae9d08bab10e0e6d103e656d1b0280"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/cpufeatures@0.2.17"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-b5fa0017ac6f5a91",
+      "name": "crypto-bigint",
+      "versionInfo": "0.5.5",
+      "downloadLocation": "https://crates.io/api/v1/crates/crypto-bigint/0.5.5/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0dc92fb57ca44df6db8059111ab3af99a63d5d0f8375d9972e319a379c6bab76"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/crypto-bigint@0.5.5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-d56933ae6981a9b3",
+      "name": "crypto-common",
+      "versionInfo": "0.1.6",
+      "downloadLocation": "https://crates.io/api/v1/crates/crypto-common/0.1.6/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1bfb12502f3fc46cca1bb51ac28df9d618d813cdc3d2f25b9fe775a34af26bb3"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/crypto-common@0.1.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-c684fda218d396fe",
+      "name": "der",
+      "versionInfo": "0.7.10",
+      "downloadLocation": "https://crates.io/api/v1/crates/der/0.7.10/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e7c1832837b905bbfb5101e07cc24c8deddf52f93225eee6ead5f4d63d53ddcb"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/der@0.7.10"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-6187a5b95c62cfaf",
+      "name": "digest",
+      "versionInfo": "0.10.7",
+      "downloadLocation": "https://crates.io/api/v1/crates/digest/0.10.7/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/digest@0.10.7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-fe99afeb0679de5e",
+      "name": "ecdsa",
+      "versionInfo": "0.16.9",
+      "downloadLocation": "https://crates.io/api/v1/crates/ecdsa/0.16.9/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ee27f32b5c5292967d2d4a9d7f1e0b0aed2c15daded5a60300e4abb9d8020bca"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/ecdsa@0.16.9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-8e66f584cd622e22",
+      "name": "elliptic-curve",
+      "versionInfo": "0.13.8",
+      "downloadLocation": "https://crates.io/api/v1/crates/elliptic-curve/0.13.8/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b5e6043086bf7973472e0c7dff2142ea0b680d30e18d9cc40f267efbf222bd47"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/elliptic-curve@0.13.8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-d71c272de7de2ea7",
+      "name": "ff",
+      "versionInfo": "0.13.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/ff/0.13.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT/Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c0b50bfb653653f9ca9095b427bed08ab8d75a137839d9ad64eb11810d5b6393"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/ff@0.13.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-404e881c7ee6437b",
+      "name": "generic-array",
+      "versionInfo": "0.14.9",
+      "downloadLocation": "https://crates.io/api/v1/crates/generic-array/0.14.9/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4bb6743198531e02858aeaea5398fcc883e71851fcbcb5a2f773e2fb6cb1edf2"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/generic-array@0.14.9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a3ffef96890bc245",
+      "name": "getrandom",
+      "versionInfo": "0.2.17",
+      "downloadLocation": "https://crates.io/api/v1/crates/getrandom/0.2.17/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/getrandom@0.2.17"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-19a6d917cd750bf6",
+      "name": "group",
+      "versionInfo": "0.13.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/group/0.13.0/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT/Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f0f9ef7462f7c099f518d754361858f86d8a07af53ba9af0fe635bbccb151a63"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/group@0.13.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-c5317e1ad1815ff0",
+      "name": "hmac",
+      "versionInfo": "0.12.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/hmac/0.12.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c49c37c09c17a53d937dfbb742eb3a961d65a994e6bcdcf37e7399d0cc8ab5e"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/hmac@0.12.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-b2d1e708d90af9dd",
+      "name": "itoa",
+      "versionInfo": "1.0.18",
+      "downloadLocation": "https://crates.io/api/v1/crates/itoa/1.0.18/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/itoa@1.0.18"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-863767a45c228ccf",
+      "name": "libc",
+      "versionInfo": "0.2.191",
+      "downloadLocation": "https://crates.io/api/v1/crates/libc/0.2.191/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/libc@0.2.191"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-7318d08618e71f2a",
+      "name": "memchr",
+      "versionInfo": "2.8.3",
+      "downloadLocation": "https://crates.io/api/v1/crates/memchr/2.8.3/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Unlicense OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Unlicense OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/memchr@2.8.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-66953f3425823973",
+      "name": "p256",
+      "versionInfo": "0.13.2",
+      "downloadLocation": "https://crates.io/api/v1/crates/p256/0.13.2/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c9863ad85fa8f4460f9c48cb909d38a0d689dba1f6f6988a5e3e0d31071bcd4b"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/p256@0.13.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ea78d5dc45b04ecc",
+      "name": "pem-rfc7468",
+      "versionInfo": "0.7.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/pem-rfc7468/0.7.0/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "88b39c9bfcfc231068454382784bb460aae594343fb030d46e9f50a645418412"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/pem-rfc7468@0.7.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-499bed63a6c2f554",
+      "name": "pkcs8",
+      "versionInfo": "0.10.2",
+      "downloadLocation": "https://crates.io/api/v1/crates/pkcs8/0.10.2/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f950b2377845cebe5cf8b5165cb3cc1a5e0fa5cfa3e1f7f55707d8fd82e0a7b7"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/pkcs8@0.10.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-f7563d8d2048a8c2",
+      "name": "primeorder",
+      "versionInfo": "0.13.6",
+      "downloadLocation": "https://crates.io/api/v1/crates/primeorder/0.13.6/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "353e1ca18966c16d9deb1c69278edbc5f194139612772bd9537af60ac231e1e6"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/primeorder@0.13.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-2d006486029c17ac",
+      "name": "proc-macro2",
+      "versionInfo": "1.0.107",
+      "downloadLocation": "https://crates.io/api/v1/crates/proc-macro2/1.0.107/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/proc-macro2@1.0.107"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-d50574c855cb0e65",
+      "name": "quote",
+      "versionInfo": "1.0.47",
+      "downloadLocation": "https://crates.io/api/v1/crates/quote/1.0.47/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/quote@1.0.47"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-57b08e099fdfe5bc",
+      "name": "rand_core",
+      "versionInfo": "0.6.4",
+      "downloadLocation": "https://crates.io/api/v1/crates/rand_core/0.6.4/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/rand_core@0.6.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-52fd31e82b7bf9af",
+      "name": "rfc6979",
+      "versionInfo": "0.4.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/rfc6979/0.4.0/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f8dd2a808d456c4a54e300a23e9f5a67e122c3024119acbfd73e3bf664491cb2"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/rfc6979@0.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a3035afe153f4aeb",
+      "name": "ryu",
+      "versionInfo": "1.0.23",
+      "downloadLocation": "https://crates.io/api/v1/crates/ryu/1.0.23/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR BSL-1.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR BSL-1.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/ryu@1.0.23"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-df822667bbad9551",
+      "name": "sec1",
+      "versionInfo": "0.7.3",
+      "downloadLocation": "https://crates.io/api/v1/crates/sec1/0.7.3/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d3e97a565f76233a6003f9f5c54be1d9c5bdfa3eccfb189469f11ec4901c47dc"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/sec1@0.7.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ef221445decddc3c",
+      "name": "serde",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/api/v1/crates/serde/1.0.228/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde@1.0.228"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-95fb5364f7978729",
+      "name": "serde_core",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/api/v1/crates/serde_core/1.0.228/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_core@1.0.228"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-5c03804b24d1c486",
+      "name": "serde_derive",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/api/v1/crates/serde_derive/1.0.228/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_derive@1.0.228"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-36bf52b49d41fe34",
+      "name": "serde_json",
+      "versionInfo": "1.0.145",
+      "downloadLocation": "https://crates.io/api/v1/crates/serde_json/1.0.145/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "402a6f66d8c709116cf22f558eab210f5a50187f702eb4d7e5ef38d9a7f1c79c"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_json@1.0.145"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ade3de04182593fb",
+      "name": "sha2",
+      "versionInfo": "0.10.9",
+      "downloadLocation": "https://crates.io/api/v1/crates/sha2/0.10.9/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a7507d819769d01a365ab707794a4084392c824f54a7a6a7862f8c3d0892b283"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/sha2@0.10.9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ac5324c4f241bdff",
+      "name": "signature",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/signature/2.2.0/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "77549399552de45a898a580c1b41d445bf730df867cc44e6c0233bbc4b8329de"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/signature@2.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-0bc8ecfb2d7e7472",
+      "name": "spki",
+      "versionInfo": "0.7.3",
+      "downloadLocation": "https://crates.io/api/v1/crates/spki/0.7.3/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d91ed6c858b01f942cd56b37a94b3e0a1798290327d1236e4d9cf4eaca44d29d"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/spki@0.7.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ead67d49b15f768e",
+      "name": "subtle",
+      "versionInfo": "2.6.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/subtle/2.6.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "BSD-3-Clause",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: BSD-3-Clause",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/subtle@2.6.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-5c8b80b625e716b9",
+      "name": "syn",
+      "versionInfo": "2.0.119",
+      "downloadLocation": "https://crates.io/api/v1/crates/syn/2.0.119/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/syn@2.0.119"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-fbadd46655f9097c",
+      "name": "typenum",
+      "versionInfo": "1.20.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/typenum/1.20.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT OR Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/typenum@1.20.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a1db7861e3aa009b",
+      "name": "unicode-ident",
+      "versionInfo": "1.0.27",
+      "downloadLocation": "https://crates.io/api/v1/crates/unicode-ident/1.0.27/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: (MIT OR Apache-2.0) AND Unicode-3.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/unicode-ident@1.0.27"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-f9ca581300806a8a",
+      "name": "version_check",
+      "versionInfo": "0.9.5",
+      "downloadLocation": "https://crates.io/api/v1/crates/version_check/0.9.5/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: MIT/Apache-2.0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/version_check@0.9.5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-6d9383bcdbe32a04",
+      "name": "wasi",
+      "versionInfo": "0.11.1+wasi-snapshot-preview1",
+      "downloadLocation": "https://crates.io/api/v1/crates/wasi/0.11.1+wasi-snapshot-preview1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/wasi@0.11.1%2Bwasi-snapshot-preview1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-3261a4b79ac96623",
+      "name": "zeroize",
+      "versionInfo": "1.9.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/zeroize/1.9.1/download",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0 OR MIT",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "licenseComments": "Cargo metadata declared: Apache-2.0 OR MIT",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zeroize@1.9.1"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-e05682060991668f"
+    },
+    {
+      "spdxElementId": "SPDXRef-e05682060991668f",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-91cc039d012d51d1"
+    },
+    {
+      "spdxElementId": "SPDXRef-e05682060991668f",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-66953f3425823973"
+    },
+    {
+      "spdxElementId": "SPDXRef-e05682060991668f",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ef221445decddc3c"
+    },
+    {
+      "spdxElementId": "SPDXRef-e05682060991668f",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-36bf52b49d41fe34"
+    },
+    {
+      "spdxElementId": "SPDXRef-e05682060991668f",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ade3de04182593fb"
+    },
+    {
+      "spdxElementId": "SPDXRef-a2f03828ea583f25",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-404e881c7ee6437b"
+    },
+    {
+      "spdxElementId": "SPDXRef-06e1c021ffa7e66b",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-863767a45c228ccf"
+    },
+    {
+      "spdxElementId": "SPDXRef-b5fa0017ac6f5a91",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-404e881c7ee6437b"
+    },
+    {
+      "spdxElementId": "SPDXRef-b5fa0017ac6f5a91",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57b08e099fdfe5bc"
+    },
+    {
+      "spdxElementId": "SPDXRef-b5fa0017ac6f5a91",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-b5fa0017ac6f5a91",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-3261a4b79ac96623"
+    },
+    {
+      "spdxElementId": "SPDXRef-d56933ae6981a9b3",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-404e881c7ee6437b"
+    },
+    {
+      "spdxElementId": "SPDXRef-d56933ae6981a9b3",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-fbadd46655f9097c"
+    },
+    {
+      "spdxElementId": "SPDXRef-c684fda218d396fe",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-73228c0d15ebc9b4"
+    },
+    {
+      "spdxElementId": "SPDXRef-c684fda218d396fe",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ea78d5dc45b04ecc"
+    },
+    {
+      "spdxElementId": "SPDXRef-c684fda218d396fe",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-3261a4b79ac96623"
+    },
+    {
+      "spdxElementId": "SPDXRef-6187a5b95c62cfaf",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a2f03828ea583f25"
+    },
+    {
+      "spdxElementId": "SPDXRef-6187a5b95c62cfaf",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-73228c0d15ebc9b4"
+    },
+    {
+      "spdxElementId": "SPDXRef-6187a5b95c62cfaf",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-d56933ae6981a9b3"
+    },
+    {
+      "spdxElementId": "SPDXRef-6187a5b95c62cfaf",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c684fda218d396fe"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6187a5b95c62cfaf"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8e66f584cd622e22"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-52fd31e82b7bf9af"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ac5324c4f241bdff"
+    },
+    {
+      "spdxElementId": "SPDXRef-fe99afeb0679de5e",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-0bc8ecfb2d7e7472"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-e73568f7d960044f"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-b5fa0017ac6f5a91"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6187a5b95c62cfaf"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-d71c272de7de2ea7"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-404e881c7ee6437b"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-19a6d917cd750bf6"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ea78d5dc45b04ecc"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-499bed63a6c2f554"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57b08e099fdfe5bc"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-df822667bbad9551"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-8e66f584cd622e22",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-3261a4b79ac96623"
+    },
+    {
+      "spdxElementId": "SPDXRef-d71c272de7de2ea7",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57b08e099fdfe5bc"
+    },
+    {
+      "spdxElementId": "SPDXRef-d71c272de7de2ea7",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-404e881c7ee6437b",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-fbadd46655f9097c"
+    },
+    {
+      "spdxElementId": "SPDXRef-404e881c7ee6437b",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-f9ca581300806a8a"
+    },
+    {
+      "spdxElementId": "SPDXRef-404e881c7ee6437b",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-3261a4b79ac96623"
+    },
+    {
+      "spdxElementId": "SPDXRef-a3ffef96890bc245",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-63e52654a6390758"
+    },
+    {
+      "spdxElementId": "SPDXRef-a3ffef96890bc245",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-863767a45c228ccf"
+    },
+    {
+      "spdxElementId": "SPDXRef-a3ffef96890bc245",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6d9383bcdbe32a04"
+    },
+    {
+      "spdxElementId": "SPDXRef-19a6d917cd750bf6",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-d71c272de7de2ea7"
+    },
+    {
+      "spdxElementId": "SPDXRef-19a6d917cd750bf6",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57b08e099fdfe5bc"
+    },
+    {
+      "spdxElementId": "SPDXRef-19a6d917cd750bf6",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-c5317e1ad1815ff0",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6187a5b95c62cfaf"
+    },
+    {
+      "spdxElementId": "SPDXRef-66953f3425823973",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-fe99afeb0679de5e"
+    },
+    {
+      "spdxElementId": "SPDXRef-66953f3425823973",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8e66f584cd622e22"
+    },
+    {
+      "spdxElementId": "SPDXRef-66953f3425823973",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-f7563d8d2048a8c2"
+    },
+    {
+      "spdxElementId": "SPDXRef-66953f3425823973",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ade3de04182593fb"
+    },
+    {
+      "spdxElementId": "SPDXRef-ea78d5dc45b04ecc",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-251315a577be18ad"
+    },
+    {
+      "spdxElementId": "SPDXRef-499bed63a6c2f554",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c684fda218d396fe"
+    },
+    {
+      "spdxElementId": "SPDXRef-499bed63a6c2f554",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-0bc8ecfb2d7e7472"
+    },
+    {
+      "spdxElementId": "SPDXRef-f7563d8d2048a8c2",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8e66f584cd622e22"
+    },
+    {
+      "spdxElementId": "SPDXRef-2d006486029c17ac",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a1db7861e3aa009b"
+    },
+    {
+      "spdxElementId": "SPDXRef-d50574c855cb0e65",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-2d006486029c17ac"
+    },
+    {
+      "spdxElementId": "SPDXRef-57b08e099fdfe5bc",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a3ffef96890bc245"
+    },
+    {
+      "spdxElementId": "SPDXRef-52fd31e82b7bf9af",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c5317e1ad1815ff0"
+    },
+    {
+      "spdxElementId": "SPDXRef-52fd31e82b7bf9af",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-e73568f7d960044f"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c684fda218d396fe"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-404e881c7ee6437b"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-499bed63a6c2f554"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ead67d49b15f768e"
+    },
+    {
+      "spdxElementId": "SPDXRef-df822667bbad9551",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-3261a4b79ac96623"
+    },
+    {
+      "spdxElementId": "SPDXRef-ef221445decddc3c",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-95fb5364f7978729"
+    },
+    {
+      "spdxElementId": "SPDXRef-ef221445decddc3c",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-5c03804b24d1c486"
+    },
+    {
+      "spdxElementId": "SPDXRef-95fb5364f7978729",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-5c03804b24d1c486"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c03804b24d1c486",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-2d006486029c17ac"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c03804b24d1c486",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-d50574c855cb0e65"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c03804b24d1c486",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-5c8b80b625e716b9"
+    },
+    {
+      "spdxElementId": "SPDXRef-36bf52b49d41fe34",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-b2d1e708d90af9dd"
+    },
+    {
+      "spdxElementId": "SPDXRef-36bf52b49d41fe34",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-7318d08618e71f2a"
+    },
+    {
+      "spdxElementId": "SPDXRef-36bf52b49d41fe34",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a3035afe153f4aeb"
+    },
+    {
+      "spdxElementId": "SPDXRef-36bf52b49d41fe34",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ef221445decddc3c"
+    },
+    {
+      "spdxElementId": "SPDXRef-36bf52b49d41fe34",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-95fb5364f7978729"
+    },
+    {
+      "spdxElementId": "SPDXRef-ade3de04182593fb",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-63e52654a6390758"
+    },
+    {
+      "spdxElementId": "SPDXRef-ade3de04182593fb",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-06e1c021ffa7e66b"
+    },
+    {
+      "spdxElementId": "SPDXRef-ade3de04182593fb",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6187a5b95c62cfaf"
+    },
+    {
+      "spdxElementId": "SPDXRef-ac5324c4f241bdff",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6187a5b95c62cfaf"
+    },
+    {
+      "spdxElementId": "SPDXRef-ac5324c4f241bdff",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57b08e099fdfe5bc"
+    },
+    {
+      "spdxElementId": "SPDXRef-0bc8ecfb2d7e7472",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-251315a577be18ad"
+    },
+    {
+      "spdxElementId": "SPDXRef-0bc8ecfb2d7e7472",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c684fda218d396fe"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c8b80b625e716b9",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-2d006486029c17ac"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c8b80b625e716b9",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-d50574c855cb0e65"
+    },
+    {
+      "spdxElementId": "SPDXRef-5c8b80b625e716b9",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a1db7861e3aa009b"
+    }
+  ]
+}
