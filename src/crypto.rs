@@ -37,7 +37,7 @@ pub fn key(pem: &str) -> Result<VerifyingKey> {
 }
 pub fn jwk(pem: &str) -> Result<Value> {
     let k = key(pem)?;
-    let p = k.to_encoded_point(false);
+    let p = k.to_sec1_point(false);
     Ok(
         json!({"kty":"EC","crv":"P-256","x":URL_SAFE_NO_PAD.encode(p.x().ok_or_else(||Error::unavailable("issuer_key_unsupported"))?),"y":URL_SAFE_NO_PAD.encode(p.y().ok_or_else(||Error::unavailable("issuer_key_unsupported"))?)}),
     )

@@ -16,9 +16,9 @@ This file defines candidate scope. Exact package bytes, licenses, toolchains,
 checksums and observed results are retained separately in the candidate report;
 no public distribution has been performed.
 
-Publication is additionally **HOLD** for known dependency advisory
+The initial candidate was additionally **HOLD** for known dependency advisory
 [RUSTSEC-2026-0387](https://rustsec.org/advisories/RUSTSEC-2026-0387.html) on
-crypto-bigint 0.5.5. Current operation uses public verification keys, not a signing
-API, but no blanket non-applicability conclusion is made. A compatible patched
-RustCrypto chain or independently justified scoped disposition requires further
-review; do not ignore/suppress the advisory to obtain a green release gate.
+crypto-bigint 0.5.5. The revised candidate uses p256 0.14.0 / crypto-bigint 0.7.10,
+with actual MSRV raised to Rust 1.87. No blanket public-verification exemption is
+claimed and no advisory is ignored. Exact archive tests, license inventory and a
+Cargo.lock-bound dated scan are required; public publication still needs approval.

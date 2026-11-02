@@ -25,12 +25,12 @@ printf 'source_commit=%s platform=%s crate_sha256=%s\n' "$sha" "$platform" "$cra
 # Build/tests from the exact extracted archive, with an initially empty target.
 if [ "$arch" = arm64 ]; then
  docker build --platform linux/arm64 -f "$tree/source/Dockerfile.msrv" -t ap2-core-msrv:local "$tree/source"
- docker run --rm --platform linux/arm64 --network none --cpus=2 --memory=2g -v "$package:/work" -w /work -e CARGO_TARGET_DIR=/work/target/msrv ap2-core-msrv:local sh -c 'rustc +1.85.0 -vV && cargo +1.85.0 test --locked --offline && cargo +1.85.0 build --release --locked --offline'
+ docker run --rm --platform linux/arm64 --network none --cpus=2 --memory=2g -v "$package:/work" -w /work -e CARGO_TARGET_DIR=/work/target/msrv ap2-core-msrv:local sh -c 'rustc +1.87.0 -vV && cargo +1.87.0 test --locked --offline && cargo +1.87.0 build --release --locked --offline'
 fi
 docker run --rm --platform "$platform" --network none --cpus=2 --memory=2g -v "$package:/work" -w /work "$image" sh -c 'cargo test --locked --offline && cargo build --release --locked --offline'
 # Inventory/tooling lives outside the package, so it cannot add undeclared files.
 docker run --rm --platform "$platform" --network none --cpus=2 --memory=1g -v "$package:/work" -v "$output:/out" -v "$tree/source/scripts:/tools:ro" -w /work -e SOURCE_DATE_EPOCH="$epoch" "$image" python3 /tools/candidate_inventory.py /out/inventory
-docker run --rm --platform "$platform" --network none --cpus=2 --memory=1g -v "$package:/work:ro" -v "$output:/out" -v "$tree/source/scripts:/tools:ro" -w /work -e CANDIDATE_SOURCE_SHA="$sha" -e CANDIDATE_CRATE_SHA="$crate_sha" "$image" python3 /tools/candidate_bundle.py /out "$triple"
+docker run --rm --platform "$platform" --network none --cpus=2 --memory=1g -v "$package:/work:ro" -v "$output:/out" -v "$tree/source/scripts:/tools:ro" -v "$tree/source/docs/candidate:/audit:ro" -w /work -e CANDIDATE_SOURCE_SHA="$sha" -e CANDIDATE_CRATE_SHA="$crate_sha" "$image" python3 /tools/candidate_bundle.py /out "$triple"
 # Extract the exact native archive into another empty tree before loading it.
 tar -xzf "$output/ap2-verifier-core-0.1.0-alpha.1-$triple.tar.gz" -C "$tree/bundle-test"
 bundle="$tree/bundle-test/ap2-verifier-core-0.1.0-alpha.1-$triple"

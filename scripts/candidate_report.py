@@ -28,12 +28,12 @@ for arch,triple in [('arm64','aarch64-unknown-linux-gnu'),('amd64','x86_64-unkno
     records.append(dict(target=triple,execution='native Docker' if arch=='arm64' else 'Docker emulation on Apple Silicon',
       source_package_files=names,artifacts=content,library=info['library'],rustc=info['rustc'],abi=info['abi'],
       needed_libraries=re.findall(r'Shared library: \[([^]]+)\]',dyn),required_symbol_versions=sorted(set(re.findall(r'(?:GLIBC|GCC)_[0-9.]+',versions))),
-      ruby=['3.4.12','4.0.9'],functional_package_tests='PASS',release_status='HOLD_RUSTSEC-2026-0387'))
+      ruby=['3.4.12','4.0.9'],functional_package_tests='PASS',release_status=info['release_status'],audit=info['audit']))
 assert crate_hashes[0]==crate_hashes[1], 'Source archives differ across target packaging'
 for name in ['sbom.spdx.json','dependency-licenses.json']:
     shutil.copy2(base/'arm64/inventory'/name,out/name)
 manifest=dict(schema='ap2.unpublished-candidate-materials.1',version='0.1.0-alpha.1',source_commit=sha,
- publication='NOT_PUBLISHED',release_status='HOLD_RUSTSEC-2026-0387',source_archive_same_bytes_both_targets=True,
- rustsec_db='2295466c4e9df26647fd67d8fa1c705ac2fc7f81',cargo_audit='0.22.2',advisory_exit_code=1,targets=records)
+ publication='NOT_PUBLISHED',release_status='OWNER_APPROVAL_REQUIRED',source_archive_same_bytes_both_targets=True,
+ rustsec_db='2295466c4e9df26647fd67d8fa1c705ac2fc7f81',cargo_audit='0.22.2',advisory_exit_code=0,targets=records)
 (out/'artifacts.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(json.dumps(dict(source=sha,source_crate_sha256=crate_hashes[0],targets=[r['target'] for r in records],release_status=manifest['release_status'])))

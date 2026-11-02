@@ -121,3 +121,14 @@ for ident,expected in [('multi-host',True),('causal-shortage',False),('causal-ex
     c=decode(a['host_checkout_jws'].split('.')[1])
     assert exact_units(root['delegate_payload'][0]['constraints'][0]['items'],c['line_items']) is expected
 print(json.dumps(dict(independent_exact_quantity_checks=4)))
+# Preserve the original ES256 acceptance range across crypto-backend updates:
+# both mathematically valid high-S and low-S JOSE signatures must verify.
+order=int('FFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551',16)
+h,p,sig=wire.split('.')
+raw=unb64(sig);r=int.from_bytes(raw[:32],'big');s=int.from_bytes(raw[32:],'big')
+verification_pem=key.public_key().public_bytes(serialization.Encoding.PEM,serialization.PublicFormat.SubjectPublicKeyInfo).decode()
+for scalar in [min(s,order-s),max(s,order-s)]:
+    variant=f'{h}.{p}.{b64(r.to_bytes(32,"big")+scalar.to_bytes(32,"big"))}'
+    assert verify_jws(variant,verification_pem)==decode(p)
+    assert rpc('checkout',dict(jwt=variant,trusted_public_key_pem=verification_pem,expected_merchant_id='shop',profile_ref='ap2.checkout.single_merchant_multi_item'))['verified']
+print(json.dumps(dict(independent_high_low_s_checks=2)))
