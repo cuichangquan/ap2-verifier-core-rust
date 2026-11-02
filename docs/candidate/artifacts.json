@@ -1,0 +1,189 @@
+{
+  "schema": "ap2.unpublished-candidate-materials.1",
+  "version": "0.1.0-alpha.1",
+  "source_commit": "9ba1a5b9cbb22638c55615391a6b740de08dc227",
+  "publication": "NOT_PUBLISHED",
+  "release_status": "OWNER_APPROVAL_REQUIRED",
+  "source_archive_same_bytes_both_targets": true,
+  "rustsec_db": "2295466c4e9df26647fd67d8fa1c705ac2fc7f81",
+  "cargo_audit": "0.22.2",
+  "advisory_exit_code": 0,
+  "targets": [
+    {
+      "target": "aarch64-unknown-linux-gnu",
+      "execution": "native Docker",
+      "source_package_files": [
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.lock",
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.toml",
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.toml.orig",
+        "ap2-verifier-core-0.1.0-alpha.1/LICENSE",
+        "ap2-verifier-core-0.1.0-alpha.1/PACKAGE_README.md",
+        "ap2-verifier-core-0.1.0-alpha.1/SECURITY.md",
+        "ap2-verifier-core-0.1.0-alpha.1/THIRD_PARTY_NOTICES.md",
+        "ap2-verifier-core-0.1.0-alpha.1/adapters/ruby/lib/ap2_verifier_core.rb",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/README.md",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/cases.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/manifest.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/multi_profile.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/single_profile.json",
+        "ap2-verifier-core-0.1.0-alpha.1/docs/CONTRACT.md",
+        "ap2-verifier-core-0.1.0-alpha.1/docs/PACKAGE_CANDIDATE.md",
+        "ap2-verifier-core-0.1.0-alpha.1/examples/verify.rb",
+        "ap2-verifier-core-0.1.0-alpha.1/include/ap2_verifier.h",
+        "ap2-verifier-core-0.1.0-alpha.1/src/constraints.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/crypto.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/disclosures.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/ffi.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/host.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/json.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/lib.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/conformance.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/independent_oracle.py",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/ruby_ffi.rb"
+      ],
+      "artifacts": [
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/arm64/ap2-verifier-core-0.1.0-alpha.1.crate",
+          "bytes": 84173,
+          "sha256": "1dd24cd73f81ab1ff72473e7d6afe71255e64bafd605c4a9cebfb710181beb71"
+        },
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/arm64/ap2-verifier-core-0.1.0-alpha.1-aarch64-unknown-linux-gnu.tar.gz",
+          "bytes": 553679,
+          "sha256": "8fa267134c94dc5ef5fa3832b01e012c6a67109e177ca5f5dc7b5073d24fa212"
+        },
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/arm64/ap2-verifier-core-0.1.0-alpha.1-aarch64-unknown-linux-gnu/lib/libap2_verifier_core.so",
+          "bytes": 957600,
+          "sha256": "730c6c79db4f115227853bba22a2535e2d1d117f4cdb2dc55b543cd6b1a3c6ba"
+        }
+      ],
+      "library": {
+        "path": "lib/libap2_verifier_core.so",
+        "bytes": 957600,
+        "sha256": "730c6c79db4f115227853bba22a2535e2d1d117f4cdb2dc55b543cd6b1a3c6ba"
+      },
+      "rustc": "rustc 1.90.0 (1159e78c4 2025-09-14)\nbinary: rustc\ncommit-hash: 1159e78c4747b02ef996e55082b704c09b970588\ncommit-date: 2025-09-14\nhost: aarch64-unknown-linux-gnu\nrelease: 1.90.0\nLLVM version: 20.1.8\n",
+      "abi": "ap2_verify_v1",
+      "needed_libraries": [
+        "libc.so.6",
+        "libgcc_s.so.1"
+      ],
+      "required_symbol_versions": [
+        "GCC_3.0",
+        "GCC_3.3",
+        "GCC_4.2.0",
+        "GLIBC_2.17",
+        "GLIBC_2.18",
+        "GLIBC_2.25",
+        "GLIBC_2.28",
+        "GLIBC_2.33",
+        "GLIBC_2.34"
+      ],
+      "ruby": [
+        "3.4.12",
+        "4.0.9"
+      ],
+      "functional_package_tests": "PASS",
+      "release_status": "OWNER_APPROVAL_REQUIRED",
+      "audit": {
+        "schema": "ap2.audit-context.1",
+        "cargo_lock_sha256": "92e4dda66fab067685182ff4db35ac350870113351efd531dff972b556749cd1",
+        "exit_code": 0,
+        "checked_at": "2026-11-02T00:49:11Z",
+        "cargo_audit": "0.22.2",
+        "rustsec_db": "2295466c4e9df26647fd67d8fa1c705ac2fc7f81"
+      }
+    },
+    {
+      "target": "x86_64-unknown-linux-gnu",
+      "execution": "Docker emulation on Apple Silicon",
+      "source_package_files": [
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.lock",
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.toml",
+        "ap2-verifier-core-0.1.0-alpha.1/Cargo.toml.orig",
+        "ap2-verifier-core-0.1.0-alpha.1/LICENSE",
+        "ap2-verifier-core-0.1.0-alpha.1/PACKAGE_README.md",
+        "ap2-verifier-core-0.1.0-alpha.1/SECURITY.md",
+        "ap2-verifier-core-0.1.0-alpha.1/THIRD_PARTY_NOTICES.md",
+        "ap2-verifier-core-0.1.0-alpha.1/adapters/ruby/lib/ap2_verifier_core.rb",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/README.md",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/cases.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/manifest.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/multi_profile.json",
+        "ap2-verifier-core-0.1.0-alpha.1/conformance/v1/single_profile.json",
+        "ap2-verifier-core-0.1.0-alpha.1/docs/CONTRACT.md",
+        "ap2-verifier-core-0.1.0-alpha.1/docs/PACKAGE_CANDIDATE.md",
+        "ap2-verifier-core-0.1.0-alpha.1/examples/verify.rb",
+        "ap2-verifier-core-0.1.0-alpha.1/include/ap2_verifier.h",
+        "ap2-verifier-core-0.1.0-alpha.1/src/constraints.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/crypto.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/disclosures.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/ffi.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/host.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/json.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/src/lib.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/conformance.rs",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/independent_oracle.py",
+        "ap2-verifier-core-0.1.0-alpha.1/tests/ruby_ffi.rb"
+      ],
+      "artifacts": [
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/amd64/ap2-verifier-core-0.1.0-alpha.1.crate",
+          "bytes": 84173,
+          "sha256": "1dd24cd73f81ab1ff72473e7d6afe71255e64bafd605c4a9cebfb710181beb71"
+        },
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/amd64/ap2-verifier-core-0.1.0-alpha.1-x86_64-unknown-linux-gnu.tar.gz",
+          "bytes": 568212,
+          "sha256": "eb081ff440c29cd240e99d69ffd1dab6917c05dcf5a11a7f1001a0b17c5115cb"
+        },
+        {
+          "path": ".cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/amd64/ap2-verifier-core-0.1.0-alpha.1-x86_64-unknown-linux-gnu/lib/libap2_verifier_core.so",
+          "bytes": 922920,
+          "sha256": "1bf0bd3d59fe51ef7a1fed1dad3552ccea04f4e7369fc4371d159c71f1a15c6c"
+        }
+      ],
+      "library": {
+        "path": "lib/libap2_verifier_core.so",
+        "bytes": 922920,
+        "sha256": "1bf0bd3d59fe51ef7a1fed1dad3552ccea04f4e7369fc4371d159c71f1a15c6c"
+      },
+      "rustc": "rustc 1.90.0 (1159e78c4 2025-09-14)\nbinary: rustc\ncommit-hash: 1159e78c4747b02ef996e55082b704c09b970588\ncommit-date: 2025-09-14\nhost: x86_64-unknown-linux-gnu\nrelease: 1.90.0\nLLVM version: 20.1.8\n",
+      "abi": "ap2_verify_v1",
+      "needed_libraries": [
+        "libc.so.6",
+        "ld-linux-x86-64.so.2",
+        "libgcc_s.so.1"
+      ],
+      "required_symbol_versions": [
+        "GCC_3.0",
+        "GCC_3.3",
+        "GCC_4.2.0",
+        "GLIBC_2.14",
+        "GLIBC_2.18",
+        "GLIBC_2.2.5",
+        "GLIBC_2.25",
+        "GLIBC_2.28",
+        "GLIBC_2.3",
+        "GLIBC_2.3.4",
+        "GLIBC_2.33",
+        "GLIBC_2.34"
+      ],
+      "ruby": [
+        "3.4.12",
+        "4.0.9"
+      ],
+      "functional_package_tests": "PASS",
+      "release_status": "OWNER_APPROVAL_REQUIRED",
+      "audit": {
+        "schema": "ap2.audit-context.1",
+        "cargo_lock_sha256": "92e4dda66fab067685182ff4db35ac350870113351efd531dff972b556749cd1",
+        "exit_code": 0,
+        "checked_at": "2026-11-02T00:49:11Z",
+        "cargo_audit": "0.22.2",
+        "rustsec_db": "2295466c4e9df26647fd67d8fa1c705ac2fc7f81"
+      }
+    }
+  ]
+}

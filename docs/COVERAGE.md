@@ -70,3 +70,9 @@ The follow-up [reproducibility/safety record](REPRODUCIBILITY.md) gives exact so
 tools and scope for these new observations. The PR #1 evidence remains historical and unchanged.
 [Candidate criteria](RELEASE_READINESS.md) distinguish these checks from replacement
 or publication approval.
+
+The [candidate report](CANDIDATE_REPORT.md) adds exact extracted-package/native
+validation and the patched p256 0.14.0 / crypto-bigint 0.7.10 stack. Current MSRV is
+1.88 (observed on Linux/arm64); x86 candidate testing used 1.90. Earlier 1.85/1.87
+observations are historical and not current support promises. The independent
+oracle now additionally checks both valid ES256 high-S and low-S signatures.

@@ -1,0 +1,131 @@
+    Checking typenum v1.20.1
+    Checking subtle v2.6.1
+    Checking rand_core v0.10.1
+   Compiling getrandom v0.4.3
+    Checking cmov v0.5.4
+    Checking ctutils v0.4.7
+    Checking const-oid v0.10.2
+   Compiling num-traits v0.2.19
+    Checking hybrid-array v0.4.15
+    Checking pem-rfc7468 v1.0.0
+    Checking crypto-common v0.2.2
+    Checking block-buffer v0.12.1
+    Checking cpubits v0.1.1
+    Checking crypto-bigint v0.7.10
+    Checking digest v0.11.3
+    Checking der v0.8.3
+    Checking ff v0.14.0
+   Compiling generic-array v0.14.9
+    Checking group v0.14.0
+    Checking spki v0.8.1
+    Checking base16ct v1.0.0
+    Checking sec1 v0.8.1
+    Checking pkcs8 v0.11.0
+    Checking primefield v0.14.0
+    Checking elliptic-curve v0.14.3
+    Checking hmac v0.13.0
+    Checking rfc6979 v0.6.0
+    Checking block-buffer v0.10.4
+    Checking crypto-common v0.1.6
+    Checking wnaf v0.14.1
+    Checking signature v3.0.0
+    Checking cpufeatures v0.3.1
+    Checking primeorder v0.14.0
+    Checking sha2 v0.11.1
+    Checking ecdsa v0.17.0
+    Checking digest v0.10.7
+    Checking sha2 v0.10.9
+    Checking p256 v0.14.0
+    Checking ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.27s
+   Compiling getrandom v0.4.3
+   Compiling num-traits v0.2.19
+   Compiling crypto-common v0.2.2
+   Compiling crypto-bigint v0.7.10
+   Compiling digest v0.11.3
+   Compiling generic-array v0.14.9
+   Compiling hmac v0.13.0
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling signature v3.0.0
+   Compiling sha2 v0.11.1
+   Compiling primefield v0.14.0
+   Compiling elliptic-curve v0.14.3
+   Compiling wnaf v0.14.1
+   Compiling rfc6979 v0.6.0
+   Compiling digest v0.10.7
+   Compiling primeorder v0.14.0
+   Compiling ecdsa v0.17.0
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.12s
+     Running unittests src/lib.rs (target/debug/deps/ap2_verifier_core-859088d425b5caf1)
+
+running 5 tests
+test ffi::safety_tests::overlap_and_limits_reject_before_access ... ok
+test ffi::safety_tests::panic_is_contained_and_output_untouched ... ok
+test ffi::safety_tests::request_at_byte_limit_uses_only_declared_input ... ok
+test ffi::tests::caller_owned_buffers_and_guards ... ok
+test ffi::safety_tests::capacity_sweep_and_repeated_ownership ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/conformance.rs (target/debug/deps/conformance-d10e128729915709)
+
+running 5 tests
+test malformed_boundaries ... ok
+test malformed_fuzz_smoke_never_mints_evidence ... ok
+test structured_mutation_smoke_preserves_result_contract ... ok
+test unknowns_fail_closed ... ok
+test retained_baseline_cases ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+
+   Doc-tests ap2_verifier_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling typenum v1.20.1
+   Compiling subtle v2.6.1
+   Compiling rand_core v0.10.1
+   Compiling getrandom v0.4.3
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.7
+   Compiling hybrid-array v0.4.15
+   Compiling const-oid v0.10.2
+   Compiling autocfg v1.5.1
+   Compiling crypto-common v0.2.2
+   Compiling num-traits v0.2.19
+   Compiling block-buffer v0.12.1
+   Compiling pem-rfc7468 v1.0.0
+   Compiling digest v0.11.3
+   Compiling cpubits v0.1.1
+   Compiling der v0.8.3
+   Compiling crypto-bigint v0.7.10
+   Compiling ff v0.14.0
+   Compiling generic-array v0.14.9
+   Compiling group v0.14.0
+   Compiling spki v0.8.1
+   Compiling base16ct v1.0.0
+   Compiling sec1 v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.13.0
+   Compiling wnaf v0.14.1
+   Compiling rfc6979 v0.6.0
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling signature v3.0.0
+   Compiling cpufeatures v0.3.1
+   Compiling sha2 v0.11.1
+   Compiling ecdsa v0.17.0
+   Compiling digest v0.10.7
+   Compiling primeorder v0.14.0
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `release` profile [optimized] target(s) in 9.31s

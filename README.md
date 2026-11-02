@@ -83,3 +83,12 @@ validation runs offline. Temporary source/build trees are removed, local Docker
 cache images remain. No CI service, host tool installation or publication.
 See [results and limits](docs/REPRODUCIBILITY.md) and
 [release decision criteria](docs/RELEASE_READINESS.md).
+
+## Local packaging candidate
+
+The unpublished experimental candidate is **0.1.0-alpha.1**, MSRV **1.88** after
+updating the RustCrypto stack to address the initial dependency advisory. Exact
+local source/native archives, SBOM/licenses, checksums and platform limits are in
+[the candidate report](docs/CANDIDATE_REPORT.md). `publish = false` remains set;
+[release scope and recovery](docs/RELEASE_PROCEDURE.md) require a separate decision.
+The stable source Ruby Gem is unchanged.

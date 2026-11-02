@@ -1,0 +1,438 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.validation
+#1 transferring dockerfile: 335B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rust:1.90.0-bookworm@sha256:3914072ca0c3b8aad871db9169a651ccfce30cf58303e5d6f2db16d1d8a7e58f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 59B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/rust:1.90.0-bookworm@sha256:3914072ca0c3b8aad871db9169a651ccfce30cf58303e5d6f2db16d1d8a7e58f
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 15.25kB done
+#5 DONE 0.0s
+
+#6 [4/5] RUN mkdir src && printf 'pub fn placeholder() {}\n' > src/lib.rs && cargo fetch --locked && rm -rf src
+#6 CACHED
+
+#7 [2/5] WORKDIR /work
+#7 CACHED
+
+#8 [3/5] COPY Cargo.toml Cargo.lock ./
+#8 CACHED
+
+#9 [5/5] RUN rustup component add rustfmt clippy
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:6c2102699125088dcbcda5b4b74fa54b8e1f87ad3cfb5ef54c4c962ca007fc82 done
+#10 naming to docker.io/library/ap2-core-candidate-arm64:local done
+#10 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/msxvsoy41bwggrhuwxadwikkd
+   Packaging ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Packaged 27 files, 987.7KiB (82.2KiB compressed)
+source_commit=9ba1a5b9cbb22638c55615391a6b740de08dc227 platform=linux/arm64 crate_sha256=1dd24cd73f81ab1ff72473e7d6afe71255e64bafd605c4a9cebfb710181beb71
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.msrv
+#1 transferring dockerfile: 405B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rust:1.90.0-bookworm@sha256:3914072ca0c3b8aad871db9169a651ccfce30cf58303e5d6f2db16d1d8a7e58f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 59B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/rust:1.90.0-bookworm@sha256:3914072ca0c3b8aad871db9169a651ccfce30cf58303e5d6f2db16d1d8a7e58f
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 62B done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /work
+#6 CACHED
+
+#7 [3/5] COPY Cargo.toml Cargo.lock ./
+#7 CACHED
+
+#8 [4/5] RUN mkdir src && printf 'pub fn placeholder() {}\n' > src/lib.rs && cargo fetch --locked && rm -rf src
+#8 CACHED
+
+#9 [5/5] RUN rustup set auto-self-update disable && rustup toolchain install 1.88.0 --profile minimal
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:588b4c59a2591f096e7dbfc0d81fe7aa41df7e7feab328c939fa919c4b0fa96f done
+#10 naming to docker.io/library/ap2-core-msrv:local done
+#10 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/p6r3qeag0yfdjmejh1vkf4k34
+rustc 1.88.0 (6b00bc388 2025-06-23)
+binary: rustc
+commit-hash: 6b00bc3880198600130e1cf62b8f8a93494488cc
+commit-date: 2025-06-23
+host: aarch64-unknown-linux-gnu
+release: 1.88.0
+LLVM version: 20.1.5
+   Compiling typenum v1.20.1
+   Compiling zeroize v1.9.1
+   Compiling subtle v2.6.1
+   Compiling libc v0.2.191
+   Compiling rand_core v0.10.1
+   Compiling hybrid-array v0.4.15
+   Compiling cfg-if v1.0.5
+   Compiling getrandom v0.4.3
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.7
+   Compiling const-oid v0.10.2
+   Compiling crypto-common v0.2.2
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling block-buffer v0.12.1
+   Compiling base64ct v1.8.3
+   Compiling pem-rfc7468 v1.0.0
+   Compiling digest v0.11.3
+   Compiling cpubits v0.1.1
+   Compiling der v0.8.3
+   Compiling crypto-bigint v0.7.10
+   Compiling ff v0.14.0
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.9
+   Compiling proc-macro2 v1.0.107
+   Compiling group v0.14.0
+   Compiling spki v0.8.1
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling base16ct v1.0.0
+   Compiling sec1 v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling serde_core v1.0.228
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.13.0
+   Compiling rfc6979 v0.6.0
+   Compiling wnaf v0.14.1
+   Compiling syn v2.0.119
+   Compiling crypto-common v0.1.6
+   Compiling block-buffer v0.10.4
+   Compiling signature v3.0.0
+   Compiling cpufeatures v0.3.1
+   Compiling serde_json v1.0.145
+   Compiling serde v1.0.228
+   Compiling ecdsa v0.17.0
+   Compiling sha2 v0.11.1
+   Compiling serde_derive v1.0.228
+   Compiling digest v0.10.7
+   Compiling primeorder v0.14.0
+   Compiling cpufeatures v0.2.17
+   Compiling ryu v1.0.23
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling base64 v0.22.1
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.44s
+     Running unittests src/lib.rs (target/msrv/debug/deps/ap2_verifier_core-18a09e2c3a36b580)
+
+running 5 tests
+test ffi::safety_tests::overlap_and_limits_reject_before_access ... ok
+test ffi::safety_tests::panic_is_contained_and_output_untouched ... ok
+test ffi::safety_tests::request_at_byte_limit_uses_only_declared_input ... ok
+test ffi::tests::caller_owned_buffers_and_guards ... ok
+test ffi::safety_tests::capacity_sweep_and_repeated_ownership ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/conformance.rs (target/msrv/debug/deps/conformance-930c9970c556e5f9)
+
+running 5 tests
+test malformed_boundaries ... ok
+test malformed_fuzz_smoke_never_mints_evidence ... ok
+test structured_mutation_smoke_preserves_result_contract ... ok
+test unknowns_fail_closed ... ok
+test retained_baseline_cases ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.44s
+
+   Doc-tests ap2_verifier_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling typenum v1.20.1
+   Compiling libc v0.2.191
+   Compiling subtle v2.6.1
+   Compiling zeroize v1.9.1
+   Compiling rand_core v0.10.1
+   Compiling hybrid-array v0.4.15
+   Compiling getrandom v0.4.3
+   Compiling cfg-if v1.0.5
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.7
+   Compiling const-oid v0.10.2
+   Compiling crypto-common v0.2.2
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling block-buffer v0.12.1
+   Compiling base64ct v1.8.3
+   Compiling pem-rfc7468 v1.0.0
+   Compiling digest v0.11.3
+   Compiling cpubits v0.1.1
+   Compiling der v0.8.3
+   Compiling crypto-bigint v0.7.10
+   Compiling ff v0.14.0
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.9
+   Compiling proc-macro2 v1.0.107
+   Compiling group v0.14.0
+   Compiling spki v0.8.1
+   Compiling unicode-ident v1.0.27
+   Compiling base16ct v1.0.0
+   Compiling quote v1.0.47
+   Compiling sec1 v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling serde_core v1.0.228
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.13.0
+   Compiling rfc6979 v0.6.0
+   Compiling wnaf v0.14.1
+   Compiling syn v2.0.119
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling signature v3.0.0
+   Compiling cpufeatures v0.3.1
+   Compiling serde v1.0.228
+   Compiling serde_json v1.0.145
+   Compiling sha2 v0.11.1
+   Compiling ecdsa v0.17.0
+   Compiling digest v0.10.7
+   Compiling serde_derive v1.0.228
+   Compiling primeorder v0.14.0
+   Compiling cpufeatures v0.2.17
+   Compiling itoa v1.0.18
+   Compiling ryu v1.0.23
+   Compiling memchr v2.8.3
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling base64 v0.22.1
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `release` profile [optimized] target(s) in 16.87s
+   Compiling typenum v1.20.1
+   Compiling libc v0.2.191
+   Compiling subtle v2.6.1
+   Compiling zeroize v1.9.1
+   Compiling rand_core v0.10.1
+   Compiling hybrid-array v0.4.15
+   Compiling getrandom v0.4.3
+   Compiling cfg-if v1.0.5
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.7
+   Compiling const-oid v0.10.2
+   Compiling crypto-common v0.2.2
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling block-buffer v0.12.1
+   Compiling base64ct v1.8.3
+   Compiling digest v0.11.3
+   Compiling pem-rfc7468 v1.0.0
+   Compiling cpubits v0.1.1
+   Compiling der v0.8.3
+   Compiling crypto-bigint v0.7.10
+   Compiling ff v0.14.0
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.9
+   Compiling proc-macro2 v1.0.107
+   Compiling group v0.14.0
+   Compiling spki v0.8.1
+   Compiling quote v1.0.47
+   Compiling base16ct v1.0.0
+   Compiling unicode-ident v1.0.27
+   Compiling sec1 v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling serde_core v1.0.228
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.13.0
+   Compiling wnaf v0.14.1
+   Compiling rfc6979 v0.6.0
+   Compiling syn v2.0.119
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling signature v3.0.0
+   Compiling cpufeatures v0.3.1
+   Compiling serde_json v1.0.145
+   Compiling serde v1.0.228
+   Compiling ecdsa v0.17.0
+   Compiling sha2 v0.11.1
+   Compiling serde_derive v1.0.228
+   Compiling digest v0.10.7
+   Compiling primeorder v0.14.0
+   Compiling cpufeatures v0.2.17
+   Compiling itoa v1.0.18
+   Compiling ryu v1.0.23
+   Compiling memchr v2.8.3
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling base64 v0.22.1
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.24s
+     Running unittests src/lib.rs (target/debug/deps/ap2_verifier_core-859088d425b5caf1)
+
+running 5 tests
+test ffi::safety_tests::overlap_and_limits_reject_before_access ... ok
+test ffi::safety_tests::panic_is_contained_and_output_untouched ... ok
+test ffi::safety_tests::request_at_byte_limit_uses_only_declared_input ... ok
+test ffi::tests::caller_owned_buffers_and_guards ... ok
+test ffi::safety_tests::capacity_sweep_and_repeated_ownership ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/conformance.rs (target/debug/deps/conformance-d10e128729915709)
+
+running 5 tests
+test malformed_boundaries ... ok
+test malformed_fuzz_smoke_never_mints_evidence ... ok
+test structured_mutation_smoke_preserves_result_contract ... ok
+test unknowns_fail_closed ... ok
+test retained_baseline_cases ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.47s
+
+   Doc-tests ap2_verifier_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling typenum v1.20.1
+   Compiling libc v0.2.191
+   Compiling zeroize v1.9.1
+   Compiling subtle v2.6.1
+   Compiling rand_core v0.10.1
+   Compiling hybrid-array v0.4.15
+   Compiling getrandom v0.4.3
+   Compiling cfg-if v1.0.5
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.7
+   Compiling const-oid v0.10.2
+   Compiling crypto-common v0.2.2
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling block-buffer v0.12.1
+   Compiling base64ct v1.8.3
+   Compiling pem-rfc7468 v1.0.0
+   Compiling digest v0.11.3
+   Compiling cpubits v0.1.1
+   Compiling der v0.8.3
+   Compiling crypto-bigint v0.7.10
+   Compiling ff v0.14.0
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.9
+   Compiling proc-macro2 v1.0.107
+   Compiling group v0.14.0
+   Compiling spki v0.8.1
+   Compiling base16ct v1.0.0
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling sec1 v0.8.1
+   Compiling pkcs8 v0.11.0
+   Compiling serde_core v1.0.228
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.13.0
+   Compiling wnaf v0.14.1
+   Compiling rfc6979 v0.6.0
+   Compiling syn v2.0.119
+   Compiling crypto-common v0.1.6
+   Compiling block-buffer v0.10.4
+   Compiling signature v3.0.0
+   Compiling cpufeatures v0.3.1
+   Compiling serde_json v1.0.145
+   Compiling serde v1.0.228
+   Compiling sha2 v0.11.1
+   Compiling ecdsa v0.17.0
+   Compiling digest v0.10.7
+   Compiling serde_derive v1.0.228
+   Compiling primeorder v0.14.0
+   Compiling cpufeatures v0.2.17
+   Compiling ryu v1.0.23
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling sha2 v0.10.9
+   Compiling p256 v0.14.0
+   Compiling base64 v0.22.1
+   Compiling ap2-verifier-core v0.1.0-alpha.1 (/work)
+    Finished `release` profile [optimized] target(s) in 18.19s
+{"resolved_packages": 61, "dependency_packages": 60, "licenses": {"MIT": 2, "Apache-2.0 OR MIT": 22, "MIT OR Apache-2.0": 29, "MIT/Apache-2.0": 3, "Unlicense OR MIT": 1, "MIT OR Apache-2.0 OR LGPL-2.1-or-later": 1, "Apache-2.0 OR BSL-1.0": 1, "BSD-3-Clause": 1, "(MIT OR Apache-2.0) AND Unicode-3.0": 1}, "missing_license_texts": []}
+{"archive": "ap2-verifier-core-0.1.0-alpha.1-aarch64-unknown-linux-gnu.tar.gz", "bytes": 553679, "sha256": "8fa267134c94dc5ef5fa3832b01e012c6a67109e177ca5f5dc7b5073d24fa212", "library": {"path": "lib/libap2_verifier_core.so", "bytes": 957600, "sha256": "730c6c79db4f115227853bba22a2535e2d1d117f4cdb2dc55b543cd6b1a3c6ba"}}
+{"ruby_ffi_cases":85,"concurrent_calls":200,"source_gem_loaded":false}
+{"string_snapshot_override_checks":3}
+verified_research/scoped_research_verified; evidence=true
+{"ruby_ffi_cases":85,"concurrent_calls":200,"source_gem_loaded":false}
+{"string_snapshot_override_checks":3}
+verified_research/scoped_research_verified; evidence=true
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.oracle
+#1 transferring dockerfile: 513B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11.15-slim-bookworm@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 59B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.11.15-slim-bookworm@sha256:d29f48a31a8b408ed19272ca1e7b10ebae13b240a27e862d3d4217c528e2e0c3
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 41.94kB done
+#5 DONE 0.0s
+
+#6 [4/7] RUN python -m pip install --disable-pip-version-check --no-cache-dir --index-url https://pypi.org/simple --only-binary=:all: --require-hashes -r requirements-oracle.lock && python -m pip check
+#6 CACHED
+
+#7 [3/7] COPY requirements-oracle.lock ./
+#7 CACHED
+
+#8 [5/7] COPY scripts/fetch_official.py ./
+#8 CACHED
+
+#9 [6/7] RUN python fetch_official.py
+#9 CACHED
+
+#10 [2/7] WORKDIR /prepare
+#10 CACHED
+
+#11 [7/7] WORKDIR /work
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 writing image sha256:bf990637096746c22e3bc1410d73716cfb6a41b9b095b825da8a18ebb27a4d73 done
+#12 naming to docker.io/library/ap2-core-oracle-arm64:local done
+#12 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/mzl4brf0nh6c9hhq8y9y14m2p
+{"independent_checks": 47, "official_ap2": "b4587ac1d055888a73b4b21750973cffba961793", "oracle": "official sd-jwt + cryptography 46.0.5", "network": false}
+{"causal_signature_and_binding_checks": 40}
+{"independent_exact_quantity_checks": 4}
+{"independent_high_low_s_checks": 2}
+PASS source_commit=9ba1a5b9cbb22638c55615391a6b740de08dc227 target=aarch64-unknown-linux-gnu local_artifacts=.cache/candidate/9ba1a5b9cbb22638c55615391a6b740de08dc227/arm64
