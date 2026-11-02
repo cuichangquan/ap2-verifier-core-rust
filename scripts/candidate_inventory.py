@@ -14,8 +14,10 @@ for p in sorted(metadata['packages'],key=lambda p:p['name']):
     license=p.get('license') or 'NOASSERTION'
     directory=Path(p['manifest_path']).parent
     files=set()
-    for pattern in ['LICENSE*','COPYING*','NOTICE*','UNLICENSE*']:
-        files.update(f for f in directory.glob(pattern) if f.is_file())
+    for entry in directory.iterdir():
+        if entry.name.upper().startswith(('LICENSE','COPYING','NOTICE','UNLICENSE')):
+            if entry.is_file():files.add(entry)
+            elif entry.is_dir():files.update(f for f in entry.rglob('*') if f.is_file())
     if p.get('license_file'):
         f=(directory/p['license_file']).resolve()
         if not f.is_relative_to(directory.resolve()):raise RuntimeError('License path escapes package')
@@ -24,8 +26,9 @@ for p in sorted(metadata['packages'],key=lambda p:p['name']):
     dest=out/'LICENSES'/(p['name']+'-'+p['version']);dest.mkdir(parents=True,exist_ok=True)
     record=[]
     for f in sorted(files):
-        data=f.read_bytes();(dest/f.name).write_bytes(data)
-        record.append(dict(file=f.name,sha256=hashlib.sha256(data).hexdigest(),bytes=len(data)))
+        relative=f.relative_to(directory);target=dest/relative;target.parent.mkdir(parents=True,exist_ok=True)
+        data=f.read_bytes();target.write_bytes(data)
+        record.append(dict(file=relative.as_posix(),sha256=hashlib.sha256(data).hexdigest(),bytes=len(data)))
     spdx_license=license.replace('MIT/Apache-2.0','MIT OR Apache-2.0')
     item=dict(SPDXID=ids[p['id']],name=p['name'],versionInfo=p['version'],downloadLocation='NOASSERTION',filesAnalyzed=False,
               licenseDeclared=spdx_license,licenseConcluded='NOASSERTION',copyrightText='NOASSERTION',
