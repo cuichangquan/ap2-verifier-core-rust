@@ -11,7 +11,9 @@ The revised experimental candidate pins p256 **0.14.0** and locks crypto-bigint
 [RUSTSEC-2026-0387](https://rustsec.org/advisories/RUSTSEC-2026-0387.html).
 Official registry metadata lists 0.7.10 non-yanked with MSRV **1.87**; the minimum
 patched 0.7.6 is yanked and not selected. The crate therefore corrects its declared
-MSRV to 1.87 and validates that compiler. No published Rust compatibility promise
+MSRV to **1.88**, required by the complete locked graph's sha2 0.11.1, and validates
+that compiler. A 1.87 package check failed and is not reported as PASS. The same
+issue was independently identified as a P2 review finding and corrected. No published Rust compatibility promise
 existed. Source Gem API/runtime is unchanged.
 
 Implementation adaptation is one private method rename, `to_encoded_point(false)`

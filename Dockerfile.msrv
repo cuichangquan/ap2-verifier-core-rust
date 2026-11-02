@@ -3,4 +3,4 @@ WORKDIR /work
 ENV CARGO_BUILD_JOBS=2
 COPY Cargo.toml Cargo.lock ./
 RUN mkdir src && printf 'pub fn placeholder() {}\n' > src/lib.rs && cargo fetch --locked && rm -rf src
-RUN rustup set auto-self-update disable && rustup toolchain install 1.87.0 --profile minimal
+RUN rustup set auto-self-update disable && rustup toolchain install 1.88.0 --profile minimal

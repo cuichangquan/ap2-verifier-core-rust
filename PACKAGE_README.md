@@ -47,7 +47,7 @@ publishing disabled; public registry/binary/tag/Release needs separate approval.
 
 **Dependency disclosure:** the initial prototype's crypto-bigint 0.5.5 was flagged
 by [RUSTSEC-2026-0387](https://rustsec.org/advisories/RUSTSEC-2026-0387.html).
-This candidate updates to p256 0.14.0 / crypto-bigint 0.7.10 and declares Rust 1.87
+This candidate updates to p256 0.14.0 / crypto-bigint 0.7.10 and declares Rust 1.88
 minimum. The dated advisory scan is retained with the local candidate; no advisory
 is ignored and no public-verification exemption is assumed. Zero known findings
 in a snapshot is not a security guarantee. Publication still requires separate

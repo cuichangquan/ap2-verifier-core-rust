@@ -25,7 +25,7 @@ printf 'source_commit=%s platform=%s crate_sha256=%s\n' "$sha" "$platform" "$cra
 # Build/tests from the exact extracted archive, with an initially empty target.
 if [ "$arch" = arm64 ]; then
  docker build --platform linux/arm64 -f "$tree/source/Dockerfile.msrv" -t ap2-core-msrv:local "$tree/source"
- docker run --rm --platform linux/arm64 --network none --cpus=2 --memory=2g -v "$package:/work" -w /work -e CARGO_TARGET_DIR=/work/target/msrv ap2-core-msrv:local sh -c 'rustc +1.87.0 -vV && cargo +1.87.0 test --locked --offline && cargo +1.87.0 build --release --locked --offline'
+ docker run --rm --platform linux/arm64 --network none --cpus=2 --memory=2g -v "$package:/work" -w /work -e CARGO_TARGET_DIR=/work/target/msrv ap2-core-msrv:local sh -c 'rustc +1.88.0 -vV && cargo +1.88.0 test --locked --offline && cargo +1.88.0 build --release --locked --offline'
 fi
 docker run --rm --platform "$platform" --network none --cpus=2 --memory=2g -v "$package:/work" -w /work "$image" sh -c 'cargo test --locked --offline && cargo build --release --locked --offline'
 # Inventory/tooling lives outside the package, so it cannot add undeclared files.

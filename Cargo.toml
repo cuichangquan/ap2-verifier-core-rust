@@ -2,7 +2,7 @@
 name = "ap2-verifier-core"
 version = "0.1.0-alpha.1"
 edition = "2021"
-rust-version = "1.87"
+rust-version = "1.88"
 license = "MIT"
 description = "Experimental fixed-profile AP2 verification core with a local C ABI"
 repository = "https://github.com/cuichangquan/ap2-verifier-core-rust"
